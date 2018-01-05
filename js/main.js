@@ -1,9 +1,9 @@
 var numero = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var operacion = ['+', '-', '*', '/', '√'];
-var signos = ['borrar', 'igual', '.', 'reset'];
-
 
 var cal = {
+	a: 0,
+	b: 0,
 	uno: function () {
 		resultado.textContent = resultado.textContent + numero[0];
 	},
@@ -38,10 +38,25 @@ var cal = {
 		resultado.textContent = "";
 	},
 	punto: function () {
-		resultado.textContent = resultado.textContent + signos[2];
+		resultado.textContent = resultado.textContent + ".";
 	},
 	borrar: function () {
 		window.alert('nose como se usa aun xdxd');
-	},	
-}
+	},
+	suma: function () {
+		resultado.textContent = resultado.textContent + operacion[0];
+	},
+	resta: function () {
+		resultado.textContent = resultado.textContent + operacion[1];
+	},
+	multiplica: function () {
+		resultado.textContent = resultado.textContent + operacion[2];
+	},
+	division: function () {
+		resultado.textContent = resultado.textContent + operacion[3];
+	},
+	raiz: function () {
+		resultado.textContent = resultado.textContent + operacion[4];
+	},
 	
+}
