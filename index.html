@@ -13,34 +13,38 @@
 			<h3 id="resultado"></h3>
 		</div>
 		<div>
-			<button id="reset">C</button>
-			<button class="operacion">√</button>
-			<button class="operacion">x</button>
-			<button id="borrar">Borrar</button>
+			<button onclick="cal.reset()" id="reset">C</button>
+			<button onclick="cal.raiz()" id="raiz" class="operacion">√</button>
+			<button id="multiplica" class="operacion">x</button>
+			<button onclick="cal.borrar()" id="borrar">Borrar</button>
 		</div>
 		<div>
-		     <button class="numero">1</button>
-			 <button class="numero">2</button>
-			 <button class="numero">3</button>
-			 <button class="operacion">/</button>
+		     <button onclick="cal.uno()" id="uno" class="numero">1</button>
+			 <button onclick="cal.dos()" id="dos" class="numero">2</button>
+			 <button onclick="cal.tres()" id="tres" class="numero">3</button>
+			 <button onclick="cal.division()" id="divide" class="operacion">/</button>
 		</div>
 		<div>
-			<button class="numero">4</button>
-			<button class="numero">5</button>
-			<button class="numero">6</button>
-			<button class="operacion">-</button>
+			<button onclick="cal.cuatro()" id="cuatro" class="numero">4</button>
+			<button onclick="cal.cinco()" id="cinco" class="numero">5</button>
+			<button onclick="cal.seis()" id="seis" class="numero">6</button>
+			<button onclick="cal.resta()" id="resta" class="operacion">-</button>
 		</div>
 		<div>
-			<button class="numero">7</button>
-			<button class="numero">8</button>
-			<button class="numero">9</button>
-			<button class="operacion">+</button>
+			<button onclick="cal.siete()" id="siete" class="numero">7</button>
+			<button onclick="cal.ocho()" id="ocho" class="numero">8</button>
+			<button onclick="cal.nueve()" id="nueve" class="numero">9</button>
+			<button onclick="cal.suma()" id="suma" class="operacion">+</button>
 		</div>
 		<div>
-			<button class="numero">0</button>
-			<button class="numero">.</button>
-			<button id="igual">=</button>	
+			<button onclick="cal.cero()" id="cero" class="numero">0</button>
+			<button onclick="cal.punto()" id="punto" class="numero">.</button>
+			<button onclick="cal.resolver()" id="igual">=</button>	
 		</div>
 	</div>
+
+	<script src="js/main.js" type="text/javascript">
+		
+	</script>
 </body>
 </html>

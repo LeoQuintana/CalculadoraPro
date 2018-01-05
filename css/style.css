@@ -21,9 +21,10 @@ body{
 }
 .result{
 	width: 97%;
-	background: white;
+	background: black;
 	padding: 5px;
 	height: 52px;
+	color: white;
 }
 #igual{
 	width: 122px;
