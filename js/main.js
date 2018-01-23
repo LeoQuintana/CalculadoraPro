@@ -1,9 +1,9 @@
 var numero = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var operacion = ['+', '-', '*', '/', '√'];
-this.a;
-this.b;
-this.operacion;
 var cal = {
+	a: 0,
+	b: 0,
+	operacion: '',
 	uno: function () {
 		resultado.textContent = resultado.textContent + numero[0];
 	},
@@ -46,35 +46,55 @@ var cal = {
 	suma: function () {
 		this.a = resultado.textContent;
 		this.operacion = operacion[0];
-		limpiar();
+		this.limpiar();
 	},
 	resta: function () {
 		this.a = resultado.textContent;
 		this.operacion = operacion[1];
-		limpiar();
+		this.limpiar();
 	},
 	multiplica: function () {
 		this.a = resultado.textContent;
 		this.operacion = operacion[2];
-		limpiar();
+		this.limpiar();
 	},
 	division: function () {
 		this.a = resultado.textContent;
 		this.operacion = operacion[3];
-		limpiar();
+		this.limpiar();
 	},
 	raiz: function () {
 		this.a = resultado.textContent;
 		this.operacion = operacion[4];
-		limpiar();
+		this.limpiar();
 	},
 	igual: function () {
 		this.b = resultado.textContent;
+		this.resolver();
 	},
-}
+	limpiar: function () {
+		resultado.textContent = '';
+	},
+	resolver: function () {
+		var res = 0;
+		console.log(this.a);
+		console.log(this.b);
 
-function limpiar () {
-	resultado.textContent = "";
+		switch(this.operacion){
+			case operacion[0]:
+			res = parseFloat(this.a) + parseFloat(this.b);
+			break;
+			case operacion[1]:
+			res = parseFloat(this.a) - parseFloat(this.b); 
+			break;
+			case operacion[2]:
+			res = parseFloat(this.a) * parseFloat(this.b); 
+			break;
+			case operacion[3]:
+			res = parseFloat(this.a) / parseFloat(this.b); 
+			break;	
+		}
+		this.limpiar();
+		resultado.textContent = res;
+	}
 }
-
- 
